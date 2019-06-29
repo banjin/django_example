@@ -21,6 +21,7 @@ def time_it(func):
     return wrapper
 
 
+############# 缓存器 ############################
 class LRUCacheDict:
     def __init__(self, max_size=1024, expiration=60):
         """
@@ -98,3 +99,19 @@ def cache_it(max_size=1024, expiration=60):
         return inner
     return wrapper
 
+############ 合并对象列表 ##########
+
+def my_reduce(func,seq, initial=None):
+    if initial != None:
+        ret = initial
+    else:
+        ret = seq.pop(0)
+    for i in seq:
+        ret = func(ret, i)
+    return ret
+
+querys_set_1 = 'filter列表对象'
+querys_set_2 = 'filter列表对象'
+temp_list = [querys_set_1, querys_set_2]
+
+tickets = my_reduce(lambda x,y: x|y, temp_list)
