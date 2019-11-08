@@ -28,3 +28,15 @@ CONSTANT = 'fruit'
 
 class Example:
     pass
+
+
+
+# models 文件编码规范(顺序)
+# > 1. 字段
+# > 2. 自定义managers属性
+# > 3 class Meta 定义
+# > 4 __str__方法
+# > 5 def save 方法
+# > 6 def get_absolute_url 方法
+# > 7 其他方法定义
+
