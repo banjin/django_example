@@ -40,3 +40,36 @@ class Example:
 # > 6 def get_absolute_url 方法
 # > 7 其他方法定义
 
+
+# 3.3 自带venv模块以后创建虚拟环境
+python3 -m venv project-env
+sourceproject-env/bin/activite
+deactivate
+
+
+# 通用项目结构
+
+project
+    |__ LICENSE
+    |__ MANIFEST.in
+    |__ README.md
+    |__ conf/   # 部署使用的nginx,supervisor等配置
+    |__ fabfile/
+    |__ others/
+    |__ requirements.txt
+    |__ setup.py  # 用来打包项目
+    |__ src/
+
+# django 项目目录结构
+
+project
+  |_project(src)
+    |__ app1
+    |__ app2
+    |__ project
+        |__settins
+            |____init__.py
+            |__base.py
+            |__develop.py
+            |__product.py
+    |__ manage.py
