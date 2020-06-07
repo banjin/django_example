@@ -4,6 +4,7 @@
 import signal
 import time
 
+
 def handler(signum, frame):
     print('Got signal: ', signum)
 

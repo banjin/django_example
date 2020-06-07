@@ -23,3 +23,7 @@ class AppClass(object):
         start_response(self.status, self response headers) 
         return [b'Hello AppClass.__call__\n']
 application = AppClass()
+
+
+
+from queue import Queue
